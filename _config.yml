@@ -12,7 +12,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: Growth Maestros | Advanced growth marketing
+      title: Growth Maestros - Advanced Growth Marketing
 
 description: We interview the best growth marketers and write in-depth articles. No spam, no agencies, no promotion. Just the knowledge of the best growth marketers around.  
 author:

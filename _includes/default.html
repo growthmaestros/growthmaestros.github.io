@@ -20,11 +20,9 @@
 	<script src="{{ site.BASE_PATH }}/assets/js/responsive-nav.js"></script>
 
 	<!-- Photoswipe CSS and JS for Gallery -->
-	{% if page.gallery %}
-	<link href="{{ site.BASE_PATH }}/assets/css/photoswipe.css" rel="stylesheet">
-	<link href="{{ site.BASE_PATH }}/assets/css/default-skin.css" rel="stylesheet">
-	<script src="{{ site.BASE_PATH }}/assets/js/photoswipe.js"></script>
-	<script src="{{ site.BASE_PATH }}/assets/js/photoswipe-ui-default.js"></script>
+	{% if page.slick %}
+	<link rel="stylesheet" type="text/css" href="/assets/resources/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="/assets/resources/slick/slick-theme.css">
 	{% endif %}
 
 
@@ -45,10 +43,11 @@
 
 	{{ content }}
 	
-	<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/resources/jquery/jquery-1.12.0.min.js"></script>
 	<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/app.js"></script>
-	{% if page.gallery %}
-	<script src="{{ site.BASE_PATH }}/assets/js/aubertguitars-photoswipe.js"></script>
+	{% if page.slick %}
+	<script src="{{ site.BASE_PATH }}/assets/resources/slick/slick.js"></script>
+	<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/slick-gm.js"></script>
 	{% endif %}
 	<script>
       var navigation = responsiveNav(".nav-collapse", {
