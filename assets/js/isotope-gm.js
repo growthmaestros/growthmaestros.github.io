@@ -28,6 +28,9 @@ $(document).ready(function(){
 	  $grid.isotope({ filter: filterValue });
 	  //set centering padding again
 	  $('.homepage-posts-container').css('padding',responsivePadding);
+	  
+	  // containerHeight(3);
+
 	});
 
 	// change is-checked class on buttons
@@ -69,10 +72,27 @@ $(document).ready(function(){
 		var boxWidth = bodyWidth * percentages[boxesPerRow];
 		var totalWidth = boxWidth * boxesPerRow + (boxesPerRow-1)*gutter;
 		var paddingValue = (bodyWidth - totalWidth)*0.5;
+		containerHeight(boxesPerRow);
 		console.log('0px ' + paddingValue + 'px');
 		return ('0px ' + paddingValue + 'px');
-			
 	}
+
+	function containerHeight (boxesPerRow) {
+		var totalBoxes = $('.post-wrapper').length;
+		// var hiddenBoxes = $('.post-wrapper[style*="display: none"]').length;
+		var hiddenBoxes = 0;
+		var numberOfRows = Math.ceil( (totalBoxes - hiddenBoxes)/boxesPerRow );
+		var heightOfBox =  $('.post-wrapper').height();
+		var minHeight = numberOfRows * heightOfBox + (20* (numberOfRows) ) + 60;
+		$('.homepage-posts-container').css('min-height', minHeight + 'px');
+		console.log('total is, ', totalBoxes);
+		console.log('hidden is  ', hiddenBoxes);
+		console.log('b per row ', boxesPerRow);
+		console.log('rows is ', numberOfRows);
+		console.log('height is ', heightOfBox);
+		console.log('min-height: '+ minHeight + 'px');
+	}
+
 
 
 

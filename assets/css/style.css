@@ -216,9 +216,9 @@ body p {
 .post-wrapper {
     width: 30%;
     border: 1px solid rgba(123, 122, 122, 0.45);
-    /*display: inline-block;*/
+    display: inline-block;
     margin-bottom: 20px;
-    height: 519px;
+    height: 509px;
     /*background-color: red;*/
 }
 
@@ -460,7 +460,7 @@ body p {
         width: 90%;
     }
 
-    .post-wrapper:nth-child(n+5){
+    .post-wrapper-homepage:nth-child(n+5){
         display: none;
     }
 
