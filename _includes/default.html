@@ -49,6 +49,10 @@
 	<script src="{{ site.BASE_PATH }}/assets/resources/slick/slick.js"></script>
 	<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/slick-gm.js"></script>
 	{% endif %}
+	{% if page.isotope %}
+	<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/isotope.min.js"></script>
+	<script type="text/javascript" src="{{ site.BASE_PATH }}/assets/js/isotope-gm.js"></script>
+	{% endif %}
 	<script>
       var navigation = responsiveNav(".nav-collapse", {
         insert: "before"
