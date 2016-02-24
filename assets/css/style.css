@@ -203,17 +203,23 @@ body p {
 
 .homepage-posts-container {
     background-color: rgba(224, 224, 224, 0);
-    padding: 0px 3%;
     text-align: center;
     margin-bottom: 50px;
     overflow-x:hidden;
 }
 
+.isotope-wrapper {
+    position: absolute;
+    width: 100%;
+}
+
 .post-wrapper {
     width: 30%;
     border: 1px solid rgba(123, 122, 122, 0.45);
-    display: inline-block;
-    margin-bottom: 30px;
+    /*display: inline-block;*/
+    margin-bottom: 20px;
+    height: 200px;
+    background-color: red;
 }
 
 .hp-post-image {
