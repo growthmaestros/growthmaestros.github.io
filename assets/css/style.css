@@ -218,8 +218,8 @@ body p {
     border: 1px solid rgba(123, 122, 122, 0.45);
     /*display: inline-block;*/
     margin-bottom: 20px;
-    height: 200px;
-    background-color: red;
+    height: 519px;
+    /*background-color: red;*/
 }
 
 .hp-post-image {
@@ -227,6 +227,10 @@ body p {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 194px;
+}
+
+.hp-post-img {
     height: 194px;
 }
 
