@@ -352,6 +352,11 @@ body p {
 }
 
 /*All posts*/
+
+.landing-container-all-posts {
+    padding-bottom: 30px;
+}
+
 .filter-accordion {
     display: none;
 }
@@ -377,7 +382,7 @@ body p {
     padding: 1% 2%;
     background-color: rgba(0, 0, 0, 0.37);
     margin-top: 20px;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 }
 
 .filter-container-hidden {
@@ -385,7 +390,7 @@ body p {
 }
 
 .filter-container-show {
-    max-height: 250px;
+    max-height: 364px;
     display: block;
     opacity: 1;
     -webkit-transition: max-height  300ms linear, opacity 500ms linear;
@@ -425,7 +430,8 @@ body p {
 
 .filter-li {
     width: 45%;
-    margin-right: 4%;
+    margin-right: 2%;
+    margin-left: 2%;
     margin-bottom: 20px;
     color: white;
     display: inline-block;
@@ -565,6 +571,28 @@ body p {
         padding-left: 0px;
         padding-right: 0px;
     }
+
+    .filter-categories-wrapper {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .filter-interview-wrapper {
+        width: 100%;
+    }
+
+    .filter-interview-li {
+        display: inline-block;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .blue-background {
+        height: 196px;
+        margin-top: -1px;
+    }
+
 }
 
 /*MORE THAN MD = 768px */
