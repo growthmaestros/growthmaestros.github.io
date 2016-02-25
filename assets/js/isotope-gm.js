@@ -112,6 +112,8 @@ $(document).ready(function(){
 				console.log('change');
 	  			$('.homepage-posts-container').css('padding',responsivePadding);
 				windowHeight = newWindowHeight;
+				$('.homepage-posts-container').css('border','1px solid red!important');
+				windowHeight = newWindowHeight;
 			}
 
 				
