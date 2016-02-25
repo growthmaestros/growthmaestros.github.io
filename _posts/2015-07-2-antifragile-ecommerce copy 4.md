@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Antifragile Ecommerce
+categories: [marketing]
+tags: [ecommerce]
+fullview: false
 gm-date: 25 Feb 2016
 gm-tags: Mobile, Ecommerce, Fashion
-gm-classes: interview mobile-app ecommerce b2c
-gm-image-url: /assets/media/greg-headshot-2.jpg
-
 
 
 ---

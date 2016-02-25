@@ -4,6 +4,8 @@ title: Goodhart's Law In Facebook Marketing
 categories: [marketing]
 tags: [facebook]
 fullview: false
+gm-date: 23 Feb 2016
+gm-tags: Mobile, Ecommerce, Fashion
 
 ---
 

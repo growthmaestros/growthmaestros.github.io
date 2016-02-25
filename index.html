@@ -23,68 +23,26 @@ slick: yes
 </div>
 <div class="pure-g blue-background"></div>
 
+
 <div class="pure-g homepage-posts-container">
+	{% for post in paginator.posts limit:6 %}
+	
 	<div class="post-wrapper post-wrapper-homepage">
-		<div class="hp-post-image"></div>
+		<a href="{{ site.BASE_PATH }}{{ post.url }}">
+			<div style="background-image: url('{{ post.gm-image-url }}')" class="hp-post-image"></div>
+		</a>
 		<div class="hp-post-text-wrapper">
-			<h3 class="hp-post-title">The Growth Story of Grabble and the top 10 things you need to do when you make a shitty listicle title that goes on for more than 3 lines</h3>
-			<p class="hp-post-date">23 Feb 2016</p>
-			<p class="hp-post-tags">Mobile, Ecommerce, Fashion</p>
-			<p class="hp-post-start-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum atque assumenda nam tempora fugit natus itaque voluptate, temporibus obcaecati modi quae nesciunt soluta corrupti cumque iure, explicabo maxime possimus dolore.</p>
-			<div class="hp-post-button">Read more</div>
+			<a href="{{ site.BASE_PATH }}{{ post.url }}"><h3 class="hp-post-title">{{ post.title }}</h3></a>
+			<p class="hp-post-date">{{ post.gm-date }}</p>
+			<p class="hp-post-tags">{{ post.gm-tags }}</p>
+			<p class="hp-post-start-text">{{ post.content | strip_html | truncatewords: 50 }}</p>
+			<a class="button-a" href="{{ site.BASE_PATH }}{{ post.url }}">
+				<div class="hp-post-button">Read more</div>
+			</a>
 		</div>
 	</div>
-	<div class="post-wrapper post-wrapper-homepage">
-		<div class="hp-post-image"></div>
-		<div class="hp-post-text-wrapper">
-			<h3 class="hp-post-title">The Growth Story of Grabble</h3>
-			<p class="hp-post-date">23 Feb 2016</p>
-			<p class="hp-post-tags">Mobile, Ecommerce, Fashion</p>
-			<p class="hp-post-start-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum atque assumenda nam tempora fugit natus itaque voluptate, temporibus obcaecati modi quae nesciunt soluta corrupti cumque iure, explicabo maxime possimus dolore.</p>
-			<div class="hp-post-button">Read more</div>
-		</div>
-	</div>
-	<div class="post-wrapper post-wrapper-homepage">
-		<div class="hp-post-image"></div>
-		<div class="hp-post-text-wrapper">
-			<h3 class="hp-post-title">The Growth Story of Grabble</h3>
-			<p class="hp-post-date">23 Feb 2016</p>
-			<p class="hp-post-tags">Mobile, Ecommerce, Fashion</p>
-			<p class="hp-post-start-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum atque assumenda nam tempora fugit natus itaque voluptate, temporibus obcaecati modi quae nesciunt soluta corrupti cumque iure, explicabo maxime possimus dolore.</p>
-			<div class="hp-post-button">Read more</div>
-		</div>
-	</div>
-	<div class="post-wrapper post-wrapper-homepage">
-		<div class="hp-post-image"></div>
-		<div class="hp-post-text-wrapper">
-			<h3 class="hp-post-title">The Growth Story of Grabble</h3>
-			<p class="hp-post-date">23 Feb 2016</p>
-			<p class="hp-post-tags">Mobile, Ecommerce, Fashion</p>
-			<p class="hp-post-start-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum atque assumenda nam tempora fugit natus itaque voluptate, temporibus obcaecati modi quae nesciunt soluta corrupti cumque iure, explicabo maxime possimus dolore.</p>
-			<div class="hp-post-button">Read more</div>
-		</div>
-	</div>
-	<div class="post-wrapper post-wrapper-homepage">
-		<div class="hp-post-image"></div>
-		<div class="hp-post-text-wrapper">
-			<h3 class="hp-post-title">The Growth Story of Grabble 5</h3>
-			<p class="hp-post-date">23 Feb 2016</p>
-			<p class="hp-post-tags">Mobile, Ecommerce, Fashion</p>
-			<p class="hp-post-start-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum atque assumenda nam tempora fugit natus itaque voluptate, temporibus obcaecati modi quae nesciunt soluta corrupti cumque iure, explicabo maxime possimus dolore.</p>
-			<div class="hp-post-button">Read more</div>
-		</div>
-	</div>
-	<div class="post-wrapper post-wrapper-homepage">
-		<div class="hp-post-image"></div>
-		<div class="hp-post-text-wrapper">
-			<h3 class="hp-post-title">The Growth Story of Grabble 6</h3>
-			<p class="hp-post-date">23 Feb 2016</p>
-			<p class="hp-post-tags">Mobile, Ecommerce, Fashion</p>
-			<p class="hp-post-start-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum atque assumenda nam tempora fugit natus itaque voluptate, temporibus obcaecati modi quae nesciunt soluta corrupti cumque iure, explicabo maxime possimus dolore.</p>
-			<div class="hp-post-button">Read more</div>
-		</div>
-	</div>
-	<div class="browse-all-button">Browse all</div>
+	{%endfor%}
+	<a href="/all-posts.html"><div class="browse-all-button">Browse all</div></a>
 </div>
 
 <div class="pure-g">

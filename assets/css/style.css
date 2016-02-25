@@ -229,21 +229,31 @@ body p {
 }
 
 .hp-post-image {
-    background-image: url('/assets/media/greg-headshot-2.jpg');
+    /*background-image: url('/assets/media/greg-headshot-2.jpg');*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 194px;
+    transition: all 150ms linear;
 }
 
-.hp-post-img {
-    height: 194px;
+.hp-post-image:hover {
+    opacity: 0.7!important;
 }
 
 .hp-post-text-wrapper {
     padding: 5%;
     text-align: left;
     background-color: white;
+}
+
+.hp-post-text-wrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+.hp-post-text-wrapper a:hover {
+    text-decoration: underline;
 }
 
 .hp-post-title {
@@ -274,6 +284,11 @@ body p {
 }
 
 .hp-post-start-text {
+    height: 114px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
 }
 
 .hp-post-button {
@@ -290,6 +305,10 @@ body p {
     opacity: 0.5;
 }
 
+.button-a {
+    text-decoration: none!important;
+}
+
 .browse-all-button {
     width: 20%;
     margin: auto;
@@ -298,6 +317,8 @@ body p {
     background-color: #36B736;
     margin-top: 30px;
     color: white;
+    text-decoration: none!important;
+    display: inline-block;
 }
 
 .browse-all-button:hover {

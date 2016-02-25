@@ -4,6 +4,8 @@ title: School of Soft Nudges - Lessons in Online Persuasion from Booking.com
 categories: [marketing]
 tags: [persuasion]
 fullview: false
+gm-date: 23 Feb 2016
+gm-tags: Mobile, Ecommerce, Fashion
 
 ---
  
