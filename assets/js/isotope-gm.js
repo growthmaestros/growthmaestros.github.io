@@ -103,10 +103,10 @@ $(document).ready(function(){
 		console.log('min-height: '+ minHeight + 'px');
 	}
 
-	var windowHeight = $(window).height();
+	var windowHeight = $(window).innerHeight();
 	window.addEventListener("scroll",function() {
 		if (isMobile) {
-			var newWindowHeight = $(window).height();
+			var newWindowHeight = $(window).innerHeight();
 			// console.log(newWindowHeight);
 			if (newWindowHeight !== windowHeight) {
 				console.log('change');
