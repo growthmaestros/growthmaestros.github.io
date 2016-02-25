@@ -10,6 +10,12 @@ $( document ).ready(function() {
 		$( '#why-exist-arrow' ).toggleClass('rotate-arrow');
 	});
 
+	$( '#filter-arrow, #filter-accordion-span' ).click(function(){
+		$( '#filter-container' ).toggleClass('filter-container-hidden');
+		$( '#filter-container' ).toggleClass('filter-container-show');
+		$( '#filter-arrow' ).toggleClass('rotate-arrow');
+	});
+
 
 
 //end Jquery

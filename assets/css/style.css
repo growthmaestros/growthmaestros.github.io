@@ -218,8 +218,14 @@ body p {
     border: 1px solid rgba(123, 122, 122, 0.45);
     display: inline-block;
     margin-bottom: 20px;
-    height: 509px;
-    /*background-color: red;*/
+    height: 598px;
+    background-color: white;
+    overflow-y:hidden;
+}
+
+.post-wrapper-homepage {
+    margin-right: 6.5px;
+    margin-left: 6.5px;
 }
 
 .hp-post-image {
@@ -244,6 +250,13 @@ body p {
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px;
+    min-height: 69px;
+    max-height: 69px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .hp-post-date {
@@ -254,15 +267,17 @@ body p {
 }
 
 .hp-post-tags {
-    display: inline-block;
+    /*display: inline-block;*/
+    margin-top:0px;
     font-style: italic;
+    min-height: 38px;
 }
 
 .hp-post-start-text {
 }
 
 .hp-post-button {
-    width: 25%;
+    width: 32%;
     margin: auto;
     padding: 12px;
     text-align: center;
@@ -337,6 +352,24 @@ body p {
 }
 
 /*All posts*/
+.filter-accordion {
+    display: none;
+}
+
+.filter-accordion p {
+    display:inline-block;
+    color: white;
+    cursor: pointer;
+}
+
+.filter-arrow {
+    display: inline-block;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
 .filter-container {
     width: 50%;
     margin: auto;
@@ -347,16 +380,34 @@ body p {
     margin-bottom: 30px;
 }
 
+.filter-container-hidden {
+
+}
+
+.filter-container-show {
+    max-height: 250px;
+    display: block;
+    opacity: 1;
+    -webkit-transition: max-height  300ms linear, opacity 500ms linear;
+    -moz-transition: max-height  300ms linear, opacity 500ms linear;
+    -o-transition: max-height  300ms linear, opacity 500ms linear;
+    -ms-transition: max-height  300ms linear, opacity 500ms linear;
+    transition: max-height  300ms linear, opacity 500ms linear;
+}
+
 .filter-categories-wrapper {
     width: 40%;
     display: inline-block;
-    padding-left: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
 }
 .filter-interview-wrapper {
-    width: 40%;
+    width: 50%;
     display: inline-block;
     float:right;
-    padding-left: 10%;
+    /*padding-left: 10%;*/
+    text-align: center;
 }
 
 .filter-container h3 {
@@ -395,6 +446,8 @@ body p {
     transition: background-color 100ms linear;
 }
 
+
+
 .is-checked {
     opacity: 1;
     background-color: #36B736;
@@ -408,6 +461,7 @@ body p {
 
 .filter-interview-li {
     display: block;
+    margin: auto;
     width: 84px;
     margin-bottom: 20px;
     color: white;
@@ -446,11 +500,44 @@ body p {
 
 
 /*MEDIA QUERIES*/
+/*allposts when the tags spill onto their own line*/
+@media screen and (min-width: 768px) and (max-width: 854px) {
+    .post-wrapper {
+        height: 619px;
+    }
+
+    .hp-post-button {
+        width: 40%;
+    }
+}
 
 /*where 3 across becomes 1 */
 @media screen and (max-width: 1023px){
     .post-wrapper {
         width: 40%;
+    }
+
+    .filter-container-hidden {
+        max-height:0px;
+        overflow:hidden;
+        opacity: 0;
+        /*padding-bottom: 0px;*/
+        -webkit-transition: max-height  300ms linear, opacity 500ms linear;
+        -moz-transition: max-height  300ms linear, opacity 500ms linear;
+        -o-transition: max-height  300ms linear, opacity 500ms linear;
+        -ms-transition: max-height  300ms linear, opacity 500ms linear;
+        transition: max-height  300ms linear, opacity 500ms linear;
+    }
+
+    .filter-accordion {
+        display: block;
+        text-align: center;
+    }
+
+    .filter-container {
+        width: 80%;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -458,14 +545,25 @@ body p {
 @media screen  and (max-width: 767px) {
     .post-wrapper {
         width: 90%;
+        height: 588px;
     }
 
     .post-wrapper-homepage:nth-child(n+5){
         display: none;
     }
 
+    .post-wrapper-homepage {
+        height: 590px!important;
+    }
+
     .browse-all-button {
         width: 40%;
+    }
+
+    .filter-container {
+        width: 90%;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 

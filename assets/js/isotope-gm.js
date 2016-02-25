@@ -52,7 +52,7 @@ $(document).ready(function(){
 	}
 
 	function responsivePadding () {
-		var bodyWidth = $('body').width();
+		var bodyWidth = $('body').width() + 15;
 		if (bodyWidth > 1023) {
 			return calcPadding(3,20)
 		} else if (bodyWidth > 767 && bodyWidth <= 1023) {
@@ -73,6 +73,10 @@ $(document).ready(function(){
 		var totalWidth = boxWidth * boxesPerRow + (boxesPerRow-1)*gutter;
 		var paddingValue = (bodyWidth - totalWidth)*0.5;
 		containerHeight(boxesPerRow);
+		console.log('calcpadding');
+		console.log(bodyWidth);
+		console.log(boxWidth);
+		console.log(totalWidth);	
 		console.log('0px ' + paddingValue + 'px');
 		return ('0px ' + paddingValue + 'px');
 	}
@@ -83,7 +87,7 @@ $(document).ready(function(){
 		var hiddenBoxes = 0;
 		var numberOfRows = Math.ceil( (totalBoxes - hiddenBoxes)/boxesPerRow );
 		var heightOfBox =  $('.post-wrapper').height();
-		var minHeight = numberOfRows * heightOfBox + (20* (numberOfRows) ) + 60;
+		var minHeight = numberOfRows * heightOfBox + (20* (numberOfRows) ) + 60 + 215;
 		$('.homepage-posts-container').css('min-height', minHeight + 'px');
 		console.log('total is, ', totalBoxes);
 		console.log('hidden is  ', hiddenBoxes);
