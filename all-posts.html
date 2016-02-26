@@ -31,9 +31,9 @@ isotope: yes
 			<div class="filter-interview-wrapper">
 				<h3>Post Type</h3>
 				<ul class="filter-ul" data-filter-group="post-type">
-					<li data-filter='' class="filter-interview-li is-checked">All</li>
-					<li data-filter='.interview' class="filter-interview-li">Interviews</li>
-					<li data-filter='.article' class="filter-interview-li">Articles</li>
+					<li data-filter='' class="filter-interview-li is-checked" id="filter-2-all">All</li>
+					<li data-filter='.interview' class="filter-interview-li" id="filter-2-interviews">Interviews</li>
+					<li data-filter='.article' class="filter-interview-li" id="filter-2-articles">Articles</li>
 				</ul>
 			</div>
 		</div>
@@ -46,7 +46,7 @@ isotope: yes
 		{% for post in site.posts %}
 		<div class="post-wrapper {{ post.gm-classes }}">
 			<a href="{{ site.BASE_PATH }}{{ post.url }}">
-				<div class="hp-post-image"></div>
+				<div class="hp-post-image" style="background-image: url('{{ post.gm-image-url }}')"></div>
 			</a>
 			<div class="hp-post-text-wrapper">
 				<a href="{{ site.BASE_PATH }}{{ post.url }}">

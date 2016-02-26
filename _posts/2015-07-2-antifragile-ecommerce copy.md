@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Antifragile Ecommerce
+title: Antifragile Ecommerce 4
 categories: [marketing]
 tags: [ecommerce]
 fullview: false

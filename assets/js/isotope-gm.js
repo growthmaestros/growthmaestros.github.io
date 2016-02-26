@@ -7,7 +7,8 @@ $(document).ready(function(){
 
 
 	// init Isotope
-	var $grid = $('.homepage-posts-container').isotope({
+	var $grid = $('.homepage-posts-container');
+	$grid.isotope({
 	    itemSelector: '.post-wrapper',
 		masonry: {
 			gutter: 20
@@ -18,6 +19,7 @@ $(document).ready(function(){
 
 	// store filter for each group
 	var filters = {};
+	var filterValue = '';
 
 	$('.filter-li, .filter-interview-li').on( 'click', function() {
 	  var $this = $(this);
@@ -27,7 +29,7 @@ $(document).ready(function(){
 	  // set filter for group
 	  filters[ filterGroup ] = $this.attr('data-filter');
 	  // combine filters
-	  var filterValue = concatValues( filters );
+	  filterValue = concatValues( filters );
 	  //reset padding
 	  $('.homepage-posts-container').css('padding','0px 0px');
 	  // set filter for Isotope
@@ -79,11 +81,11 @@ $(document).ready(function(){
 		var totalWidth = boxWidth * boxesPerRow + (boxesPerRow-1)*gutter;
 		var paddingValue = (bodyWidth - totalWidth)*0.5;
 		containerHeight(boxesPerRow);
-		console.log('calcpadding');
-		console.log(bodyWidth);
-		console.log(boxWidth);
-		console.log(totalWidth);	
-		console.log('0px ' + paddingValue + 'px');
+		// console.log('calcpadding');
+		// console.log(bodyWidth);
+		// console.log(boxWidth);
+		// console.log(totalWidth);	
+		// console.log('0px ' + paddingValue + 'px');
 		return ('0px ' + paddingValue + 'px');
 	}
 
@@ -95,25 +97,37 @@ $(document).ready(function(){
 		var heightOfBox =  $('.post-wrapper').height();
 		var minHeight = numberOfRows * heightOfBox + (20* (numberOfRows) ) + 60 + 215;
 		$('.homepage-posts-container').css('min-height', minHeight + 'px');
-		console.log('total is, ', totalBoxes);
-		console.log('hidden is  ', hiddenBoxes);
-		console.log('b per row ', boxesPerRow);
-		console.log('rows is ', numberOfRows);
-		console.log('height is ', heightOfBox);
-		console.log('min-height: '+ minHeight + 'px');
+		// console.log('total is, ', totalBoxes);
+		// console.log('hidden is  ', hiddenBoxes);
+		// console.log('b per row ', boxesPerRow);
+		// console.log('rows is ', numberOfRows);
+		// console.log('height is ', heightOfBox);
+		// console.log('min-height: '+ minHeight + 'px');
 	}
 
 	var windowHeight = $(window).innerHeight();
 	window.addEventListener("scroll",function() {
-		if (isMobile) {
+		if (!isMobile) {
 			var newWindowHeight = $(window).innerHeight();
-			// console.log(newWindowHeight);
+			console.log('init is ',windowHeight);
+			console.log('new is ',newWindowHeight);
+
 			if (newWindowHeight !== windowHeight) {
-				console.log('change');
-	  			$('.homepage-posts-container').css('padding',responsivePadding);
+				console.log('CHANGE');
+				console.log('filter v is ', filterValue);
+					
+				if (filterValue == '') {
+					$( '#filter-2-all' ).trigger('click');
+				} else if (filterValue.indexOf('.interview') > -1) {
+					$( '#filter-2-interviews' ).trigger('click');
+				} else if (filterValue.indexOf('.article') > -1) {
+					$( '#filter-2-articles' ).trigger('click');
+				}
+
+
 				windowHeight = newWindowHeight;
-				$('.homepage-posts-container').css('border','1px solid red!important');
-				windowHeight = newWindowHeight;
+				console.log('FINISHED');
+					
 			}
 
 				
