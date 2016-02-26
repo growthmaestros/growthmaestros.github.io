@@ -66,6 +66,15 @@ body p {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
+
+.mobile-container {
+    position: fixed;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    margin-top: 60px;
+}
+
 /*NAVBAR*/
 .navbar-container {
     z-index: 2000;
