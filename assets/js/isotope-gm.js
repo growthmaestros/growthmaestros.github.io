@@ -107,7 +107,7 @@ $(document).ready(function(){
 
 	var windowHeight = $(window).innerHeight();
 	window.addEventListener("scroll",function() {
-		if (isMobile) {
+		// if (isMobile) {
 			var newWindowHeight = $(window).innerHeight();
 			console.log('init is ',windowHeight);
 			console.log('new is ',newWindowHeight);
@@ -135,7 +135,7 @@ $(document).ready(function(){
 
 			console.log('done');
 				
-		}	
+		// }	
 	});
 
 
