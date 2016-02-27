@@ -17,6 +17,10 @@ $( document ).ready(function() {
 	});
 
 
+	$( '#nav-hamburger' ).click(function(){
+		$( '#nav-flex' ).toggleClass('nav-flex-show');
+	});
+
 
 
 
