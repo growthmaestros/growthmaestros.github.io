@@ -647,7 +647,7 @@ body p {
         float: right;
         width: 100%!important;
         text-align: right;
-        padding-right: 62px;
+        /*padding-right: 62px;*/
     }
 
     .nav-toggle {
