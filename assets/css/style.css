@@ -790,7 +790,7 @@ body p {
         width: 42%;
         display: inline-block;
         float: right;
-        margin-right: 8%;
+        margin-right: 12%;
         font-size: 1.2em;
     }
 
@@ -806,7 +806,7 @@ body p {
     }
 
     .navbar-container {
-        min-height: 66px;
+        min-height: 44px;
     }
 
     .homepage-title h1 {
