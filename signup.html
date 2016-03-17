@@ -1,0 +1,80 @@
+---
+layout: page
+tagline:
+---
+<div class="pure-g position-relative landing-container landing-container-all-posts clearfix">
+	<div class="pure-u-sm-1 homepage-hero" id="">
+		<div class="pure-u-sm-1 subpage-title">
+			<h1>Sign up</h1>
+		</div>
+		<div class="line-break"></div>
+	</div>
+</div>
+
+<div class="interview-container pure-u-sm-1">
+	<div class="interview-main-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus tempora ea voluptatum, perspiciatis id hic obcaecati, qui quae dolor quos. Magni repellat sit, autem quia odio. Perferendis animi porro ad! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, labore esse dolorem dicta, libero eaque repellat exercitationem, facere cupiditate unde non quisquam odio placeat. Illo aspernatur assumenda nulla quisquam quibusdam!</p>
+
+		<div class="signup-form">
+			<!--  BEGIN: Signup Form Manual Code from Benchmark Email Ver 3.0  -->
+
+			<style type="text/css">
+			.formbox-editor-663674 {margin: 0 auto;padding: 30px 40px;text-align: left;width: 100%;box-sizing: border-box;}
+			.formbox-editor-663674 fieldset {border: none;margin: 0;padding: 0;position: relative; text-align:center;}
+			.formbox-editor-663674 fieldset > input, .formbox-editor fieldset > textarea, .formbox-editable-field {margin: 10px 0;outline: none;}
+			.formbox-title-663674 {background: none;border: none;color: #000;font-size: 1.5em;padding: 0;width: 100%;word-break: break-all;margin: 10px 0;}
+			.formbox-title-663674 {border-radius: 0;min-height: 0;}
+			input.formbox-field-663674 {border: 2px solid #f1f2f2;border-radius: 0;box-sizing: border-box;color: #000;font-family: Helvetica, Arial, sans-serif;font-size: 14px;padding: 15px;width: 100%;}
+			input.field-error-663674 {border-color: #f15858;}
+			input.formbox-button-663674 {background-color: #2DA226;border-width: 0;border-style: solid;border-color: #21292d;border-radius: 8px;color: #fff;display: inline-block;font-family: Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 600;padding: 15px;margin: 10px 0;text-align: center;word-break: break-all;cursor: pointer;}
+			button.formbox-button-663674 {background-color: #2DA226;border-width: 0;border-style: solid;border-color: #21292d;border-radius: 8px;color: #fff;display: inline-block;font-family: Helvetica, Arial, sans-serif;font-size: 14px;font-weight: 600;padding: 15px;margin: 10px 0;text-align: center;word-break: break-all;cursor: pointer;}
+			.formbox-editor-663674{background-color:#ffffff !important;}
+			.formbox-title-663674{font-size:1.5em !important;font-weight:normal !important;color:#000000 !important;text-align:center !important;}
+			.formbox-button-663674{font-family:Helvetica, Arial, sans-serif !important;font-size:14px !important;font-weight:600 !important;color:#ffffff !important;background-color:#2DA226 !important;border-radius:2px !important;border-color:#21292d !important;border-width:0px !important;border-style:solid;}
+			.formbox-button-663674:hover{opacity:0.6;}
+			 #tdLogo663674 img{margin-botton:10px; max-width:230px;}
+			}
+			</style>
+			<script type="text/javascript">
+			function CheckField663674(fldName, frm){ if ( frm[fldName].length ) { for ( var i = 0, l = frm[fldName].length; i < l; i++ ) {  if ( frm[fldName].type =='select-one' ) { if( frm[fldName][i].selected && i==0 && frm[fldName][i].value == '' ) { return false; }  if ( frm[fldName][i].selected ) { return true; } }  else { if ( frm[fldName][i].checked ) { return true; } }; } return false; } else { if ( frm[fldName].type == "checkbox" ) { return ( frm[fldName].checked ); } else if ( frm[fldName].type == "radio" ) { return ( frm[fldName].checked ); } else { frm[fldName].focus(); return (frm[fldName].value.length > 0); }} }
+			function rmspaces(x) {var leftx = 0;var rightx = x.length -1;while ( x.charAt(leftx) == ' ') { leftx++; }while ( x.charAt(rightx) == ' ') { --rightx; }var q = x.substr(leftx,rightx-leftx + 1);if ( (leftx == x.length) && (rightx == -1) ) { q =''; } return(q); }
+			function checkfield(data) {if (rmspaces(data) == ""){return false;}else {return true;}}
+			function isemail(data) {var flag = false;if (  data.indexOf("@",0)  == -1 || data.indexOf("\\",0)  != -1 ||data.indexOf("/",0)  != -1 ||!checkfield(data) ||  data.indexOf(".",0)  == -1  ||  data.indexOf("@")  == 0 ||data.lastIndexOf(".") < data.lastIndexOf("@") ||data.lastIndexOf(".") == (data.length - 1)   ||data.lastIndexOf("@") !=   data.indexOf("@") ||data.indexOf(",",0)  != -1 ||data.indexOf(":",0)  != -1 ||data.indexOf(";",0)  != -1  ) {return flag;} else {var temp = rmspaces(data);if (temp.indexOf(' ',0) != -1) { flag = true; }var d3 = temp.lastIndexOf('.') + 4;var d4 = temp.substring(0,d3);var e2 = temp.length  -  temp.lastIndexOf('.')  - 1;var i1 = temp.indexOf('@');if (  (temp.charAt(i1+1) == '.') || ( e2 < 1 ) ) { flag = true; }return !flag;}}
+			function _checkSubmit663674(frm){
+			if ( !CheckField663674("fldfirstname", frm) ) { 
+			   alert("Please enter the First Name");
+			   return false;
+			}
+			if ( !isemail(frm["fldEmail"].value) ) { 
+			   alert("Please enter the Email Address");
+			   return false;
+			}
+			 return true; }
+			</script>
+			<div>
+			<div class="formbox-editor-663674" style="background: #fff; width: 320px;">
+			<form style="display:inline;" action="https://lb.benchmarkemail.com//code/lbform" method=post name="frmLB663674" accept-charset="UTF-8" onsubmit="return _checkSubmit663674(this);" >
+			<input type=hidden name=successurl value="http://www.benchmarkemail.com/Code/ThankYouOptin" />
+			<input type=hidden name=errorurl value="http://lb.benchmarkemail.com//Code/Error" />
+			<input type=hidden name=token value="mFcQnoBFKMQXK4uR7Uxd1uZXUawFafLCVUMtR2h4dgU25INw4ATiAA%3D%3D" />
+			<input type=hidden name=doubleoptin value="" /><fieldset><div class="formbox-title-663674">Get the latest</div></fieldset>
+			<fieldset class="formbox-field-fname-663674">
+			<input type=text placeholder="First Name *" class="formbox-field-663674" name="fldfirstname" maxlength=100 />
+			</fieldset>
+			<fieldset class="formbox-field-email-663674">
+			<input type=text placeholder="Email Address *" class="formbox-field-663674" name="fldEmail" maxlength=100 />
+			</fieldset>
+
+			<fieldset><button type="submit" id="btnSubmit" krydebug="1751" class="formbox-button-663674">Subscribe</button></fieldset></form>
+			</div>
+			</div>
+			<!-- END: Signup Form Manual Code from Benchmark Email Ver 3.0 -->
+		</div>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit similique impedit iusto animi magnam aliquam molestiae eos architecto? Magni quam, accusamus voluptatem culpa ut ea esse beatae ullam a? Quaerat.</p>
+
+
+
+
+	</div>
+</div>

@@ -530,16 +530,80 @@ body p {
     width: 100%;
     margin: auto;
     display: block;
-    height: 250px;
+    /*height: 250px;*/
     margin-top: 22px;
     margin-bottom: 30px;
 }
 
-.interview-text p {
+/*.interview-text p {
+    line-height: 1.8em;
+    font-size: 17px;
+    margin-bottom: 25px;
+}*/
+
+.interview-main-content p {
     line-height: 1.8em;
     font-size: 17px;
     margin-bottom: 25px;
 }
+/*Contributors*/
+.contributors-wrapper {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 40px;
+    vertical-align: top;
+}
+
+.contributors-img {
+    width: 150px;
+    background-image: url('/assets/media/greg-headshot-2.jpg');
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 500px;
+    margin: auto;
+}
+
+.contributors-text-container {
+    min-height: 132px;
+}
+
+.contributors-name {
+    font-weight: bold;
+}
+
+.contributors-company {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #797979;
+}
+
+.contributors-job  {
+    font-style: italic;
+}
+
+.contributors-interview-link {
+    text-decoration: none;
+    color: #2980B8;
+}
+
+.contributors-interview-link:hover {
+    opacity: 0.6;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.contributors-a {
+    text-decoration: none;
+}
+
+.thin-blue-top-container {
+    margin-top: 40px;
+}
+
+
 
 /*footer*/
 .footer-container {
@@ -613,6 +677,10 @@ body p {
         padding-left: 10px;
         padding-right: 10px;
     }
+
+    .contributors-wrapper {
+        width: 49%;
+    }
 }
 
 /*LESS THAN MD = 768px */
@@ -665,6 +733,10 @@ body p {
         width: 90%;
         padding: 20px;
         padding-top: 80px;
+    }
+
+    .contributors-wrapper {
+        width: 100%;
     }
 
 }
